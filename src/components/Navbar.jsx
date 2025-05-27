@@ -1,6 +1,6 @@
 import { useState } from "react"
 import {close, logo, menu} from '../assets'
-import { navLinks } from '../constants'
+import { navLinks } from '../constants/index'
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -13,7 +13,7 @@ const Navbar = () => {
 
       <ul className="list-none sm:flex hidden
       justify-end items-center flex-1">
-        {navLinks.map((nav, index) => {
+        {navLinks.map((nav, index) => (
           <li
             key={nav.id}
             className={`font-poppins font-normal cursor-pointer
@@ -23,7 +23,7 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
 
             </li>
-        })}
+        ))}
       
       </ul>
 
@@ -31,7 +31,7 @@ const Navbar = () => {
         <img src={toggle ? close : menu}
           alt="menu" 
           className="w-[28px] h-[28px] object-contain"
-          onClick={()=>setToggle(!toggle)}
+          onClick={()=>setToggle((prev)=>!prev)}
           />
 
           <div
@@ -40,7 +40,7 @@ const Navbar = () => {
               min-w[140px] rounded-xl sidebar`}>
 
                   <ul className="list-none flex justify-end items-start flex-1 flex-col">
-                    {navLinks.map((nav, index)=>{
+                    {navLinks.map((nav, index)=>(
                       <li
                           key={nav.id}
                           className={`font-poppins font-medium cursor-pointer text-[16px]
@@ -52,7 +52,7 @@ const Navbar = () => {
 
                             <a href={`#${nav.id}`}>{nav.title}</a>
                       </li>
-                    })}
+                    ))}
                   </ul>
           </div>
       </div>
