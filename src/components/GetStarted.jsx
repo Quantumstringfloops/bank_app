@@ -1,6 +1,5 @@
 import styles from "../style";
-import React from 'react'
-import {arrowUp} from "../assets";
+import { arrowUp } from "../assets";
 
 const GetStarted = () => (
   <div className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}>
@@ -12,7 +11,7 @@ const GetStarted = () => (
         <img src={arrowUp} alt="arrow-up" className="w-[23px] h-[23px] object-contain" />
       </div>
       
-      <p className="font-poppins font-medium text-[18px] leading-[23.4px] mr-2">
+      <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
         <span className="text-gradient">Started</span>
       </p>
     </div>
