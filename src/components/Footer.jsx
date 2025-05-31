@@ -1,5 +1,5 @@
 import React from 'react'
-import { layout } from '../style'
+import styles ,{ layout } from '../style'
 import { logo } from '../assets'
 
 const Footer = () => (
